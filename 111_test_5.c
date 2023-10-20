@@ -23,45 +23,35 @@ int main()
             count_b++;
         }
     }
-    // printf("%d %d", count_a, count_b);
-    if (count_a % 2 == 0 || count_a % 11 == 0)
-    {
-        if (count_a % 2 == 0)
-        {
-            for (int i = 0; i < count_a; i++)
-            {
-                printf("1");
+     printf("1=%d 0=%d", count_a, count_b);
+     int temp = count_a;
+
+     if(count_a <= (count_a + count_b)/2+1){
+        for(int i =0;i<count_a+count_b;i++){
+            if(count_a%2 ==0){
+                if(temp>0){
+                    printf("1");
+                    temp--;}
+                else{
+                    
+                }
             }
-            for (int i = 0; i < count_b; i++)
-            {
-                printf("0");
-            }
-        }
-        else
-        {
-            if (n >= (count_a * 2) - 1)
-            {
-                for (int i = 0; i < n; i++)
-                {
-                    if (i % 2 == 0 && count_a > 0)
-                    {
+            else{
+                for(int i = 0;i<count_a + count_b;i++){
+                    if(i%2==0 && temp >0){
                         printf("1");
-                        count_a--;
+                        temp--;
                     }
-                    else
-                    {
+                    else{
                         printf("0");
                     }
                 }
             }
-            else
-            {
-                printf("-1");
-            }
+
         }
-    }
-    else
-    {
+     }
+     else{
         printf("-1");
-    }
+     }
+    
 }
