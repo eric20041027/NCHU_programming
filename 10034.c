@@ -4,11 +4,20 @@
 #include<stdbool.h>
 
 int main(){
-    int n;
+    int n,combo = 0,result = 0;
+    bool judge = true;
     scanf("%d",&n);
     char list[n];
     scanf("%s",list);
     for(int i=0;i<n;i++){
-        printf("%c",list[i]);
+        if(list[i] == 'O'){
+            combo++;
+        }
+        else{
+            combo = 0;
+        }
+        result += combo;
+        //printf("%c",list[i]);
     }
+    printf("%d",result);
 }
