@@ -14,8 +14,6 @@ int sum(int n){
 
     int list[digit];
     
-    
-
     for(int i = 0;i<digit;i++){
         list[i] = n%10;
         n /= 10;
